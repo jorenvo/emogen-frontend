@@ -30,6 +30,6 @@
             result.style.webkitAnimation = "";
             result.style.visibility = "visible";
             submitButton.disabled = false;
-        }, 5);
+        }, 20);
     });
 }
