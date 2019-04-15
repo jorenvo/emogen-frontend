@@ -7,16 +7,17 @@
     <link rel="stylesheet" href="//unpkg.com/papercss@1.6.1/dist/paper.min.css">
   </head>
   <body id="emogen">
-    <h3>somelongboringurl.com/somepage -> jvo.sh/r/<span id="emojis">🐰🦊🐴</span></h3>
-    <img id="gopher" src="assets/gopher.png"/>
+    <h3>somelongboringurl.com/somepage -> jvo.sh/r/<span class="emojis">🐰🦊🐴</span></h3>
+    <img id="gopher" src="assets/gopher.png" alt="A funny gopher"/>
 
     <div id="result">
-      <span id="shortened-link">https://jvo.sh/r/<span id="emojis">🐰🦊🐴</span></span>
+      <span id="shortened-link"></span>
       <button id="copy">copy</button>
     </div>
 
     <form method="POST">
-      <input id="input" type="text" id="link" name="link" required/>
+      <input id="link" type="text" name="link" required autofocus
+             />
       <input id="submit" type="submit" value="Shorten">
     </form>
     <script src="script.js"></script>
