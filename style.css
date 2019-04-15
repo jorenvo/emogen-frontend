@@ -7,6 +7,11 @@
     font-size: 0.6em;
 }
 
+a {
+    /* disable papercss stuff */
+    background-image: none !important;
+}
+
 #gopher {
     width: 240px;
     margin: 0 auto;
