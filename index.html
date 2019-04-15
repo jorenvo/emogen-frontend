@@ -4,12 +4,16 @@
     <meta charset="utf-8">
     <title>Emogen</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="//unpkg.com/papercss@1.6.1/dist/paper.min.css">
   </head>
-  <body>
+  <body id="emogen">
+    <h3>somelongboringurl.com/somepage -> jvo.sh/r/<span id="emojis">🐰🦊🐴</span></h3>
+    <img id="gopher" src="assets/gopher.png"/>
     <form method="POST">
       <input id="input" type="text" id="link" name="link" required/>
       <input id="submit" type="submit" value="Shorten">
     </form>
+    <span id="shortened"/>
     <script src="script.js"></script>
   </body>
 </html>

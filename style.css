@@ -1,0 +1,32 @@
+#emogen {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+#emojis {
+    font-size: 0.6em;
+}
+
+#gopher {
+    width: 240px;
+    margin: 0 auto;
+    margin-bottom: -17px;
+
+    /* disable papercss stuff */
+    border: none;
+    border-radius: 0;
+}
+
+input {
+    display: block;
+    margin-top: 5px !important;
+}
+
+#input {
+    width: 800px;
+}
+
+#submit, h3 {
+    margin-left: auto;
+    margin-right: auto;
+}
