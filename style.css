@@ -105,17 +105,48 @@ button {
     margin-right: auto;
 }
 
+#toast {
+    margin-top: 50px;
+    text-align: center;
+    width: var(--width);
+    font-size: var(--font-size) !important;
+    visibility: hidden;
+    opacity: 0;
+
+    animation-duration: 3s;
+    animation-name: toast-animation;
+    animation-iteration-count: 1;
+}
+
+@keyframes toast-animation {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
 #result {
     visibility: hidden;
     text-align: center;
     margin-top: 20px;
 
     animation-duration: .2s;
-    animation-name: bounceIn;
+    animation-name: bounce-in;
     animation-timing-function: cubic-bezier(.5, 0.05, 1, .6);
 }
 
-@keyframes bounceIn {
+@keyframes bounce-in {
     0% {
         transform: translateY(-50px);
         opacity: 0;
