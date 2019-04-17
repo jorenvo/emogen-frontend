@@ -1,10 +1,67 @@
+:root {
+    --regular-font-large-display-size: 1em;
+    --regular-font-small-display-size: 1.5em;
+
+    --large-font-large-display-size: 2em;
+    --large-font-small-display-size: 2.2em;
+
+    --gopher-width-small-display-size: 360px;
+    --gopher-width-large-display-size: 240px;
+
+    --gopher-margin-bottom-small-display-size: -59px;
+    --gopher-margin-bottom-large-display-size: -49px;
+
+    --width: 800px;
+    --font-size: var(--regular-font-small-display-size);
+    --large-font-size: var(--large-font-small-display-size);
+    --gopher-width: var(--gopher-width-small-display-size);
+    --gopher-margin-bottom: var(--gopher-margin-bottom-small-display-size);
+}
+
+@media screen and (min-width: 1000px) {
+    :root {
+        --font-size: var(--regular-font-large-display-size);
+        --large-font-size: var(--large-font-large-display-size);
+        --gopher-width: var(--gopher-width-large-display-size);
+        --gopher-margin-bottom: var(--gopher-margin-bottom-large-display-size);
+    }
+}
+
 #emogen {
     margin: 0 auto;
-    max-width: 800px;
+    max-width: var(--width);
+    font-size: var(--font-size);
 }
 
 .emojis {
     font-size: 0.6em;
+}
+
+.title-container-small {
+    display: block;
+}
+
+.title-container-large {
+    display: none;
+}
+
+@media screen and (min-width: 1000px) {
+    .title-container-small {
+        display: none;
+    }
+
+    .title-container-large {
+        display: block;
+    }
+}
+
+.title-container-small, .title-container-large {
+    text-align: center;
+}
+
+.title-container-small h3 {
+    margin: 0;
+    font-size: var(--large-font-size);
 }
 
 a {
@@ -13,9 +70,10 @@ a {
 }
 
 #gopher {
-    width: 240px;
+    width: var(--gopher-width);
     margin: 0 auto;
-    margin-bottom: -49px;
+    margin-top: 20px;
+    margin-bottom: var(--gopher-margin-bottom);
 
     /* disable papercss stuff */
     border: none;
@@ -25,10 +83,11 @@ a {
 input {
     display: block;
     margin-top: 5px !important;
+    font-size: var(--font-size) !important;
 }
 
 #link {
-    width: 800px;
+    width: var(--width);
 }
 
 #copy {
