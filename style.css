@@ -1,39 +1,20 @@
 :root {
-    --regular-font-large-display: 1em;
-    --regular-font-small-display: 1em;
-
-    --large-font-large-display: 2em;
-    --large-font-small-display: 1.2em;
-
-    --gopher-width-small-display: 200px;
-    --gopher-width-large-display: 240px;
-
-    --gopher-margin-bottom-small-display: -16px;
-    --gopher-margin-bottom-large-display: -16px;
-
     --width: 300px;
-    --font-size: var(--regular-font-small-display);
-    --large-font-size: var(--large-font-small-display);
-    --gopher-width: var(--gopher-width-small-display);
-    --gopher-margin-bottom: var(--gopher-margin-bottom-small-display);
-    --result-top: var(--result-top-small-display);
+    --large-font-size: 1.2em;
+    --gopher-width: 200px;
 }
 
 @media screen and (min-width: 640px) {
     :root {
         --width: 800px;
-        --font-size: var(--regular-font-large-display);
-        --large-font-size: var(--large-font-large-display);
-        --gopher-width: var(--gopher-width-large-display);
-        --gopher-margin-bottom: var(--gopher-margin-bottom-large-display);
-        --result-top: var(--result-top-large-display);
+        --large-font-size: 2em;
+        --gopher-width: 240px;
     }
 }
 
 #emogen {
     margin: 0 auto;
     max-width: var(--width);
-    font-size: var(--font-size);
 }
 
 .emojis {
@@ -76,7 +57,7 @@ a {
     width: var(--gopher-width);
     margin: 0 auto;
     margin-top: 10px;
-    margin-bottom: var(--gopher-margin-bottom);
+    margin-bottom: -16px;
 
     /* disable papercss stuff */
     border: none;
@@ -86,11 +67,6 @@ a {
 input {
     display: block;
     margin-top: 5px !important;
-    font-size: var(--font-size) !important;
-}
-
-button {
-    font-size: var(--font-size) !important;
 }
 
 #link {
@@ -111,7 +87,6 @@ button {
     margin-top: 50px;
     text-align: center;
     width: var(--width);
-    font-size: var(--font-size) !important;
     visibility: hidden;
     opacity: 0;
 
