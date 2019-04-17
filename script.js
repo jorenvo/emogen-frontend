@@ -3,7 +3,6 @@
     const input = document.querySelector("#link");
     const result = document.querySelector("#result");
     const shortened = document.querySelector("#shortened-link");
-    const copyButton = document.querySelector("#copy");
 
     submitButton.addEventListener("click", async event => {
         event.preventDefault();
@@ -35,16 +34,8 @@
         }, 20);
     });
 
-    copyButton.addEventListener("click", _ => {
-        let textArea = document.createElement("textarea");
-
-        // decode the URI href, otherwise emojis will appear encoded
-        textArea.value = decodeURIComponent(shortened.href);
-
-        document.body.appendChild(textArea);
-        textArea.focus();
-        textArea.select();
-        document.execCommand("copy");
-        document.body.removeChild(textArea);
+    const clipboard = new ClipboardJS("#copy");
+    clipboard.on('success', (event) => {
+        event.clearSelection();
     });
 }
