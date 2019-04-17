@@ -1,17 +1,17 @@
 :root {
     --regular-font-large-display: 1em;
-    --regular-font-small-display: 1.5em;
+    --regular-font-small-display: 1em;
 
     --large-font-large-display: 2em;
-    --large-font-small-display: 2.2em;
+    --large-font-small-display: 1.2em;
 
-    --gopher-width-small-display: 360px;
+    --gopher-width-small-display: 200px;
     --gopher-width-large-display: 240px;
 
-    --gopher-margin-bottom-small-display: -22px;
+    --gopher-margin-bottom-small-display: -16px;
     --gopher-margin-bottom-large-display: -16px;
 
-    --width: 800px;
+    --width: 300px;
     --font-size: var(--regular-font-small-display);
     --large-font-size: var(--large-font-small-display);
     --gopher-width: var(--gopher-width-small-display);
@@ -19,8 +19,9 @@
     --result-top: var(--result-top-small-display);
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 640px) {
     :root {
+        --width: 800px;
         --font-size: var(--regular-font-large-display);
         --large-font-size: var(--large-font-large-display);
         --gopher-width: var(--gopher-width-large-display);
@@ -47,7 +48,7 @@
     display: none;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 640px) {
     .title-container-small {
         display: none;
     }
@@ -74,6 +75,7 @@ a {
 #gopher {
     width: var(--gopher-width);
     margin: 0 auto;
+    margin-top: 10px;
     margin-bottom: var(--gopher-margin-bottom);
 
     /* disable papercss stuff */
