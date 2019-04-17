@@ -1,29 +1,31 @@
 :root {
-    --regular-font-large-display-size: 1em;
-    --regular-font-small-display-size: 1.5em;
+    --regular-font-large-display: 1em;
+    --regular-font-small-display: 1.5em;
 
-    --large-font-large-display-size: 2em;
-    --large-font-small-display-size: 2.2em;
+    --large-font-large-display: 2em;
+    --large-font-small-display: 2.2em;
 
-    --gopher-width-small-display-size: 360px;
-    --gopher-width-large-display-size: 240px;
+    --gopher-width-small-display: 360px;
+    --gopher-width-large-display: 240px;
 
-    --gopher-margin-bottom-small-display-size: -59px;
-    --gopher-margin-bottom-large-display-size: -49px;
+    --gopher-margin-bottom-small-display: -22px;
+    --gopher-margin-bottom-large-display: -16px;
 
     --width: 800px;
-    --font-size: var(--regular-font-small-display-size);
-    --large-font-size: var(--large-font-small-display-size);
-    --gopher-width: var(--gopher-width-small-display-size);
-    --gopher-margin-bottom: var(--gopher-margin-bottom-small-display-size);
+    --font-size: var(--regular-font-small-display);
+    --large-font-size: var(--large-font-small-display);
+    --gopher-width: var(--gopher-width-small-display);
+    --gopher-margin-bottom: var(--gopher-margin-bottom-small-display);
+    --result-top: var(--result-top-small-display);
 }
 
 @media screen and (min-width: 1000px) {
     :root {
-        --font-size: var(--regular-font-large-display-size);
-        --large-font-size: var(--large-font-large-display-size);
-        --gopher-width: var(--gopher-width-large-display-size);
-        --gopher-margin-bottom: var(--gopher-margin-bottom-large-display-size);
+        --font-size: var(--regular-font-large-display);
+        --large-font-size: var(--large-font-large-display);
+        --gopher-width: var(--gopher-width-large-display);
+        --gopher-margin-bottom: var(--gopher-margin-bottom-large-display);
+        --result-top: var(--result-top-large-display);
     }
 }
 
@@ -72,7 +74,6 @@ a {
 #gopher {
     width: var(--gopher-width);
     margin: 0 auto;
-    margin-top: 20px;
     margin-bottom: var(--gopher-margin-bottom);
 
     /* disable papercss stuff */
@@ -86,13 +87,17 @@ input {
     font-size: var(--font-size) !important;
 }
 
+button {
+    font-size: var(--font-size) !important;
+}
+
 #link {
     width: var(--width);
 }
 
 #copy {
     margin-left: 5px;
-    padding: 3px;
+    padding: 0.5rem;
 }
 
 #submit, h3 {
@@ -102,9 +107,8 @@ input {
 
 #result {
     visibility: hidden;
-    position: relative;
-    top: -33px;
-    left: 527px;
+    text-align: center;
+    margin-top: 20px;
 
     animation-duration: .2s;
     animation-name: bounceIn;
